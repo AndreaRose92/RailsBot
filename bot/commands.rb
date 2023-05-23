@@ -1,6 +1,7 @@
 require "discordrb"
+require_relative "../config/token.rb"
 
-bot = Discordrb::Commands::CommandBot.new token: "MTExMDY0NDA4MDc2NzE1NjI1NQ.GYelN6.4RkEotUM9P9Ok-i0z_1AzT3R77squyqNSnaZgk", prefix: "!"
+bot = Discordrb::Commands::CommandBot.new token: token, prefix: "!"
 
 bot.command :user do |event|
   event.user.name
